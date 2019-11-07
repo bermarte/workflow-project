@@ -17,3 +17,9 @@
 ###> symfony/web-server-bundle ###
 /.web-server-pid
 ###< symfony/web-server-bundle ###
+
+#php storm folder
+./idea
+/idea
+./idea/
+/idea/

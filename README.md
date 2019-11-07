@@ -1,2 +1,2 @@
 # workflow-project
-working together with Simfony
+working together with Symfony

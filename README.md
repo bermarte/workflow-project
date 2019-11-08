@@ -2,8 +2,15 @@
 working together with Symfony
 # to copy the repository:
 git clone git@github.com:bermarte/workflow-project.git<br>
+# start your project:
 cd workflow-project<br>
 composer install<br>
+# configure your db:
+cp .env .env.local<br>
+edit this line in .env.local : DATABASE_URL=mysql://user:password127.0.0.1:3306/db_schema<br>
+create a new db_schema using datagrip<br>
+<hr>
+
 
 #Mission call center:
 

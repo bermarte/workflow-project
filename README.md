@@ -8,8 +8,9 @@ composer install<br>
 # configure your db:
 cp .env .env.local<br>
 edit this line in .env.local : DATABASE_URL=mysql://user:password127.0.0.1:3306/db_schema<br>
-create a new db_schema using datagrip<br>
+create a new db_schema using datagrip or<br>
 cd bin<br>
+./console doctrine:database:create<br>
 ./console make:migration<br>
 ./console doctrine:migrations:migrate<br>
 <hr>

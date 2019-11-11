@@ -2,16 +2,12 @@
 
 namespace App\Controller;
 
-
 use App\Form\SaveUserNameType;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-//use Symfony\Component\HttpFoundation\Response;
-//use http\Env\Response;
-//use App\Controller\Request;
 
 class MainController extends AbstractController
 {
@@ -20,6 +16,9 @@ class MainController extends AbstractController
      */
     public function index()
     {
+
+
+
         return $this->render('main/index.html.twig', [
             'controller_name' => 'MainController',
         ]);
@@ -63,7 +62,11 @@ class MainController extends AbstractController
             $en = $this->getDoctrine()->getManager();
             $en->persist($user);
             $en->flush();
+
+            $this->get('session')->getFlashBag()->add('notice', array('type' => 'success', 'title' => 'Success!', 'message' => 'user data updated'));
+            return $this->redirectToRoute("main");
         }
+
 
         return $this->render('form-data/form-data.html.twig', [
             'form_user_name' => $form->createView()

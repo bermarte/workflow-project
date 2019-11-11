@@ -56,6 +56,16 @@ class Ticket
      */
     private $is_escalated;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $user_id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="tickets")
+     */
+    private $relation;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -153,6 +163,30 @@ class Ticket
     public function setIsEscalated(bool $is_escalated): self
     {
         $this->is_escalated = $is_escalated;
+
+        return $this;
+    }
+
+    public function getUserId(): ?int
+    {
+        return $this->user_id;
+    }
+
+    public function setUserId(int $user_id): self
+    {
+        $this->user_id = $user_id;
+
+        return $this;
+    }
+
+    public function getRelation(): ?User
+    {
+        return $this->relation;
+    }
+
+    public function setRelation(?User $relation): self
+    {
+        $this->relation = $relation;
 
         return $this;
     }

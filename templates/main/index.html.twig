@@ -1,20 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %} Workflow-project {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="jumbotron">
+        <h1 class="display-4">Workflow-project</h1>
+        <p class="lead">from Becode</p>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="control-group">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+                {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <div class="col">
+                        <p class="text-center">Login or Register</p>
+                        <div class="text-center">
+                        <a class="btn btn-primary btn-lg mr-4" href="/login" role="button">Login</a>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/workflow-project/src/Controller/MainController.php'|file_link(0) }}">src/Controller/MainController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/workflow-project/templates/main/index.html.twig'|file_link(0) }}">templates/main/index.html.twig</a></code></li>
-    </ul>
-</div>
+                        <a class="btn btn-primary btn-lg mr-4" href="/register" role="button">Register</a>
+                    </div>
+                    </div>
+            {% endif %}
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                <h2 class="text-center">Welcome user {{ app.user.email }}</h2>
+                    <div class="col text-center">
+                        <a class="btn btn-primary btn-lg mr-4" href="{{ path('user_name') }}" role="button">set/update data</a>
+                    </div>
+            {% endif %}
+                </div>
+                </div>
+        </div>
+    </div>
 {% endblock %}

@@ -18,6 +18,9 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 
+#migrations
+/src/Migrations/*
+
 #php storm folder
 ./idea
 /idea

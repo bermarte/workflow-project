@@ -1,9 +1,24 @@
 # workflow-project
 working together with Symfony
+# to copy the repository:
+git clone git@github.com:bermarte/workflow-project.git<br>
+# start your project:
+cd workflow-project<br>
+composer install<br>
+# configure your db:
+cp .env .env.local<br>
+edit this line in .env.local : DATABASE_URL=mysql://user:password127.0.0.1:3306/db_schema<br>
+create a new db_schema using datagrip or<br>
+cd bin<br>
+./console doctrine:database:create<br>
+./console make:migration<br>
+./console doctrine:migrations:migrate<br>
+<hr>
 
-Mission call center:
 
-Guest:
+#Mission call center:
+
+#Guest:
 
 - Hij kan zichzelf registreren als klant.
 
@@ -174,6 +189,8 @@ Managers:
 
 
 - Managers kunnen prioriteiten toewijzen, waarop de tickets moeten worden gesorteerd.
+
+
 
 
 

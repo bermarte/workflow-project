@@ -16,6 +16,32 @@ class MainController extends AbstractController
      */
     public function index()
     {
+       // $manager1 = $this->get('security.token_storage')->getToken()->getUser();
+
+       // $manag = $this->getDoctrine()->getRepository(User::class)
+          //  ->findOneBy(['id' => $manager1->getId()]);
+
+     /*   $manager1 = new User();
+        $manager1->setEmail('John@gmail.com');
+        $manager1->setName('John');
+        $manager1->setPassword('0123456789***');
+        $manager1->setIsManager('true');
+
+
+        $en = $this->getDoctrine()->getManager();
+        $en->persist($manager1);
+        $en->flush(); */
+
+      /*  $agent1 = new User();
+        $agent1->setEmail('sicco2@gmail.com');
+        $agent1->setName('sicco2');
+        $agent1->setPassword('0123456789***');
+        $agent1->setIsAgent('true');
+
+
+        $en = $this->getDoctrine()->getManager();
+        $en->persist($agent1);
+        $en->flush(); */
 
 
 

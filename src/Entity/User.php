@@ -47,6 +47,16 @@ class User implements UserInterface
      */
     private $tickets;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $is_Manager;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $is_Agent;
+
     public function __construct()
     {
         $this->tickets = new ArrayCollection();
@@ -169,6 +179,30 @@ class User implements UserInterface
                 $ticket->setRelation(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getIsManager(): ?bool
+    {
+        return $this->is_Manager;
+    }
+
+    public function setIsManager(?bool $is_Manager): self
+    {
+        $this->is_Manager = $is_Manager;
+
+        return $this;
+    }
+
+    public function getIsAgent(): ?bool
+    {
+        return $this->is_Agent;
+    }
+
+    public function setIsAgent(?bool $is_Agent): self
+    {
+        $this->is_Agent = $is_Agent;
 
         return $this;
     }

@@ -34,7 +34,7 @@
                     </thead>
                     <tbody>
                     {% for ticket in tickets %}
-
+                    {% if ticket.userId == app.user.id %}
                         <tr>
                             <td>{{ ticket.id }}</td>
                             <td>{{ ticket.textBody }}</td>
@@ -46,7 +46,7 @@
                                 <a href="{{ path('ticket_edit', {'id': ticket.id}) }}">edit</a>
                             </td>
                         </tr>
-
+                    {% endif %}
                     {% else %}
                         <tr>
                             <td>no records found</td>

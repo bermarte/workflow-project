@@ -22,37 +22,37 @@ class Ticket
     private $text_body;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $is_public;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $is_open;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $is_in_progress;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $customer_coment;
+    private $customer_comment;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $agent_coment;
+    private $agent_comment;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $is_waiting_for_feedback;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $is_escalated;
 
@@ -119,27 +119,26 @@ class Ticket
         return $this;
     }
 
-    public function getCustomerComent(): ?string
+    public function getCustomerComment(): ?string
     {
-        return $this->customer_coment;
+        return $this->customer_comment;
     }
 
-    public function setCustomerComent(string $customer_coment): self
+    public function setCustomerComment(string $customer_comment): self
     {
-        $this->customer_coment = $customer_coment;
+        $this->customer_comment = $customer_comment;
 
         return $this;
     }
 
-    public function getAgentComent(): ?string
+    public function getAgentComment(): ?string
     {
-        return $this->agent_coment;
+        return $this->agent_comment;
     }
 
-    public function setAgentComent(string $agent_coment): self
+    public function setAgentComment(string $agent_comment): self
     {
-        $this->agent_coment = $agent_coment;
-
+        $this->agent_comment = $agent_comment;
         return $this;
     }
 

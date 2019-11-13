@@ -206,13 +206,11 @@ class User implements UserInterface
 
         return $this;
     }
-<<<<<<< HEAD
-=======
+
     //this is for the CRUD/ticket
     public function __toString()
     {
         return strval( $this->getId() );
     }
 
->>>>>>> ber
 }

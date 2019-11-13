@@ -22,6 +22,7 @@ class RegistrationController extends AbstractController
     {
         if($this->isGranted("IS_AUTHENTICATED_FULLY"))
         {
+            //return $this->redirectToRoute("main");
             return $this->redirectToRoute("main");
         }
 
@@ -30,6 +31,7 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $user->setRoles(["ROLE_CUSTOMER"]);
             // encode the plain password
             $user->setPassword(
                 $passwordEncoder->encodePassword(
@@ -50,6 +52,7 @@ class RegistrationController extends AbstractController
                 $authenticator,
                 'main' // firewall name in security.yaml
             );
+
         }
 
         return $this->render('registration/register.html.twig', [

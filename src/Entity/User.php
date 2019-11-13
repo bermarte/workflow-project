@@ -206,4 +206,10 @@ class User implements UserInterface
 
         return $this;
     }
+    //this is for the CRUD/ticket
+    public function __toString()
+    {
+        return strval( $this->getId() );
+    }
+
 }

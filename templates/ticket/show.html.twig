@@ -18,31 +18,31 @@
                             <td>{{ ticket.id }}</td>
                         </tr>
                         <tr>
-                            <th>Text_body</th>
+                            <th>Text body</th>
                             <td>{{ ticket.textBody }}</td>
                         </tr>
                         <tr>
-                            <th>Is_public</th>
+                            <th>Is public</th>
                             <td>{{ ticket.isPublic ? 'Yes' : 'No' }}</td>
                         </tr>
                         <tr>
-                            <th>Is_open</th>
+                            <th>Is open</th>
                             <td>{{ ticket.isOpen ? 'Yes' : 'No' }}</td>
                         </tr>
                         <tr>
-                            <th>Is_in_progress</th>
+                            <th>Is in progress</th>
                             <td>{{ ticket.isInProgress ? 'Yes' : 'No' }}</td>
                         </tr>
                         <tr>
-                            <th>Customer_comment</th>
+                            <th>Customer comment</th>
                             <td>{{ ticket.customerComment }}</td>
                         </tr>
                         <tr>
-                            <th>Agent_comment</th>
+                            <th>Agent comment</th>
                             <td>{{ ticket.agentComment }}</td>
                         </tr>
                         <tr>
-                            <th>Is_waiting_for_feedback</th>
+                            <th>Is waiting for feedback</th>
                             <td>{{ ticket.isWaitingForFeedback ? 'Yes' : 'No' }}</td>
                         </tr>
                         <tr>
@@ -50,15 +50,15 @@
                             <td>{{ ticket.isEscalated ? 'Yes' : 'No' }}</td>
                         </tr>
                         <tr>
-                            <th>User_id</th>
+                            <th>User id</th>
                             <td>{{ ticket.userId }}</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <a href="{{ path('ticket_index') }}">back to list</a>
+                <a href="{{ path('ticket_index') }}" class="m-2">back to list</a>
 
-                <a href="{{ path('ticket_edit', {'id': ticket.id}) }}">edit</a>
+                <a href="{{ path('ticket_edit', {'id': ticket.id}) }}" class="m-2" >edit</a>
                 </div>
             </div>
         </div>

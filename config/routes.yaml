@@ -1,6 +1,0 @@
-#index:
-#    path: /
-#    controller: App\Controller\MainController::index
-
-app_logout:
-  path: /logout

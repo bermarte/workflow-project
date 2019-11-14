@@ -28,26 +28,28 @@ php bin/console doctrine:migrations:migrate<br>
 
 ----------------------------------------------------------------------------------------
 
-Customer:												 TICKET:
+Customer:												 
+TICKET:
+
 
 
 - Een klant kan een ticket maken op de website. En krijgt de status "OPEN".				-Ticket heeft een ID 
 
-													-Tekst_body (information in the ticket)
+-Tekst_body (information in the ticket)
 
-													-Ticket heeft een foreign key (id customer)
+-Ticket heeft een foreign key (id customer)
 
-													-Is_public and Is_private
+-Is_public and Is_private
 
-													-Status is open or closed
+-Status is open or closed
 
-													-Property Is_in_progress
+-Property Is_in_progress
 
-													-Customer_comment and Agent_comment
+-Customer_comment and Agent_comment
 				
-													-Ticket is_waiting_for_customer_feedback, yes or not
+-Ticket is_waiting_for_customer_feedback, yes or not
 
-													-Escalate yes or not
+-Escalate yes or not
 	
 
 
@@ -65,34 +67,22 @@ Customer:												 TICKET:
 
 Agent:
 
-													Agent:
 
-													-Agent heeft een ID (property)
+-Agent heeft een ID (property)
 
-													-Escalate a ticket (property)
+-Escalate a ticket (property)
 
-													-Name (property)
+-Name (property)
 
-													-Password (property)
+-Password (property)
 
-													-Leave comment on ticket (function)
+-Leave comment on ticket (function)
 
-													-Choose comment to be public or private	(property)
+-Choose comment to be public or private	(property)
 
-													-Agent kan de ticket zien (function)
+-Agent kan de ticket zien (function)
 
-													-Agent can auto-assign a ticket	(function)
-
-													
-
-													
-
-													
-
-
-
-
-
+-Agent can auto-assign a ticket	(function)
 
 - Nummer 1 agenten kunnen alle open tickets zien en er een aan zichzelf toewijzen. Het krijgt nu de status "in uitvoering".
 
@@ -110,15 +100,15 @@ Second-line Agent:
 
 	
 
-													-Secondline-Agent heeft een ID (property)
+-Secondline-Agent heeft een ID (property)
 
-													-Name (property)
+-Name (property)
 
-													-Password (property)
+-Password (property)
 
-													-Leave comment on ticket (function)
+-Leave comment on ticket (function)
 
-													-Choose comment to be public or private (property)
+-Choose comment to be public or private (property)
 
 													
 
@@ -133,27 +123,27 @@ Managers:
 
 
 			
-													 Manager:
+Manager:
 
-													-Manager heeft een ID
+-Manager heeft een ID
 
-													-Name
+-Name
 
-													-Password
+-Password
 
-													-Manager kan een agent maken (function)
+-Manager kan een agent maken (function)
 
-													-Manager can see the number of open, closed and re-opened tickets of the 														 agents ( function)
+-Manager can see the number of open, closed and re-opened tickets of the 														 agents ( function)
 
-													-Manager kan de percentage zien (function)
+-Manager kan de percentage zien (function)
 
-													-Manager can re-assign tickets (function)
+-Manager can re-assign tickets (function)
 
-													-Manager can mark the ticket "won't fix", should write why
+-Manager can mark the ticket "won't fix", should write why
 
-													-Manager can with 1 button de-assign all the tickets for the agents 														(function)
+-Manager can with 1 button de-assign all the tickets for the agents 														(function)
 
-													-Manager can assign priorities (function)
+-Manager can assign priorities (function)
 
 
 

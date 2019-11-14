@@ -5,7 +5,16 @@
 {% block body %}
 <div class="container">
 <div class="jumbotron">
-    <div class="text-center user-title">user: <strong class="user-title-bigger">{{ app.user.email }}</strong></div>
+    {# we need the user role #}
+    {% set role_user = '' %}
+    {% for role in app.user.roles %}
+        {% if role == "ROLE_CUSTOMER" %}
+            {% set role_user = 'user' %}
+        {% endif %}
+    {% endfor %}
+
+
+    <div class="text-center user-title">{{ role_user }}: <strong class="user-title-bigger">{{ app.user.email }}</strong></div>
     <div class="row">
         <div class="col">
             <div class="card bg-light">

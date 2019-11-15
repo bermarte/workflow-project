@@ -11,8 +11,10 @@
         {% if role == "ROLE_CUSTOMER" %}
             {% set role_user = 'user' %}
         {% endif %}
+        {% if role == "ROLE_AGENT" %}
+            {% set role_user = 'agent' %}
+        {% endif %}
     {% endfor %}
-
 
     <div class="text-center user-title">{{ role_user }}: <strong class="user-title-bigger">{{ app.user.email }}</strong></div>
     <div class="row">

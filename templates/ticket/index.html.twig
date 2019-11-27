@@ -37,7 +37,7 @@
                 <td>{{ ticket.id }}</td>
                 <td>{{ ticket.textBody }}</td>
                 <td>{{ ticket.isOpen ? 'Yes' : 'No' }}</td>
-                <td>{{ ticket.customerComent }}</td>
+                <td>{{ ticket.customerComment }}</td>
                 <td>{{ ticket.userId }}</td>
                 <td>
                     <a href="{{ path('ticket_show', {'id': ticket.id}) }}">show</a>
@@ -52,7 +52,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('ticket_new') }}" class="ml-2">Create new</a>
+    <a href="{{ path('ticket_new') }}" class="m-2">Create new</a>
             </div>
         </div>
     </div>

@@ -13,13 +13,15 @@ class TicketType extends AbstractType
     {
         $builder
             ->add('text_body')
-            ->add('customer_coment')
+            ->add('customer_comment')
             ->add('user_id')
             ->add('is_open')
+
+
              /*
              ->add('is_public')
              ->add('is_in_progress')
-            ->add('agent_coment')
+            ->add('agent_comment')
             ->add('is_waiting_for_feedback')
             ->add('is_escalated')
             ->add('relation')
